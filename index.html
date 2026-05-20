@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Impostazioni base della pagina. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Giocatori Pallavolo</title>
+
+    <!-- Collegamento al CSS. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Logo in alto a sinistra. -->
+    <img src="logo_Fipav.png" alt="Logo FIPAV" class="logo-fipav">
+
+    <main class="container">
+        <h1>INSERIMENTO NUOVI GIOCATORI</h1>
+
+        <!-- Form per inserire un nuovo giocatore. -->
+        <section class="form-section">
+            <form id="formGiocatore">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Inserisci nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" name="cognome" placeholder="Inserisci cognome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="eta">Età</label>
+                    <input type="number" id="eta" name="eta" min="12" max="40" placeholder="Da 12 a 40" required>
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoria</label>
+
+                    <!-- Le option vengono aggiunte con JavaScript. -->
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Seleziona categoria</option>
+                    </select>
+                </div>
+
+                <button type="submit">Inserisci</button>
+            </form>
+
+            <!-- Qui compaiono messaggi di errore o successo. -->
+            <p id="messaggio"></p>
+        </section>
+
+        <!-- Lista dei giocatori caricati dal backend. -->
+        <section class="lista-section">
+            <h2>Giocatori precaricati</h2>
+
+            <div class="filtro">
+                <label for="filtroCategoria">Filtra per categoria</label>
+
+                <!-- Anche questa select viene completata con JavaScript. -->
+                <select id="filtroCategoria">
+                    <option value="tutti">Tutti</option>
+                </select>
+            </div>
+
+            <!-- Qui JavaScript inserisce le card dei giocatori. -->
+            <div id="listaGiocatori" class="lista-giocatori"></div>
+
+            <!-- Messaggio mostrato quando non ci sono altri giocatori da caricare. -->
+            <p id="messaggioPaginazione" class="messaggio-paginazione"></p>
+
+            <!-- Bottone che carica altri 3 giocatori alla volta. -->
+            <div class="mostra-altro-container">
+                <button type="button" id="btnMostraAltro" class="btn-mostra-altro">
+                    Mostra altro
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Collegamento al JavaScript. -->
+    <script src="script.js"></script>
+</body>
+</html>

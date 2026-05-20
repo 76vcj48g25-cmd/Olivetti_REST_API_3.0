@@ -1,0 +1,170 @@
+/* Impostazione generale per calcolare meglio le dimensioni degli elementi. */
+* {
+    box-sizing: border-box;
+}
+
+/* Stile base della pagina. */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f8;
+    color: #222;
+    position: relative;
+}
+
+/* Logo in alto a sinistra. */
+.logo-fipav {
+    position: fixed;
+    top: 4px;
+    left: 4px;
+    width: 210px;
+    height: auto;
+    z-index: 1000;
+    mix-blend-mode: multiply;
+    background: transparent;
+}
+
+/* Contenitore principale della pagina. */
+.container {
+    max-width: 900px;
+    margin: 110px auto 40px auto;
+    padding: 20px;
+}
+
+/* Titolo principale. */
+h1 {
+    text-align: center;
+    color: #1d3557;
+    margin-bottom: 30px;
+}
+
+/* Titolo della sezione giocatori. */
+h2 {
+    color: #1d3557;
+    margin-top: 40px;
+}
+
+/* Riquadri del form e della lista. */
+.form-section,
+.lista-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Form disposto in verticale. */
+form {
+    display: grid;
+    gap: 18px;
+}
+
+/* Singolo campo del form. */
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Testo delle label. */
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* Stile di input e select. */
+input,
+select {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Stile dei bottoni. */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #457b9d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Effetto quando passi sopra un bottone. */
+button:hover:not(:disabled) {
+    background-color: #1d3557;
+}
+
+/* Bottone disabilitato durante il caricamento. */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Messaggio sotto il form. */
+#messaggio {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Colori dei messaggi. */
+.successo {
+    color: green;
+}
+
+.errore {
+    color: red;
+}
+
+/* Filtro categoria. */
+.filtro {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+/* Griglia delle card. */
+.lista-giocatori {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* Card del singolo giocatore. */
+.card-giocatore {
+    border: 1px solid #ddd;
+    border-left: 6px solid #457b9d;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.card-giocatore h3 {
+    margin: 0 0 10px;
+    color: #1d3557;
+}
+
+.card-giocatore p {
+    margin: 5px 0;
+}
+
+/* Messaggio finale della paginazione. */
+.messaggio-paginazione {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #1d3557;
+}
+
+/* Centra il bottone "Mostra altro". */
+.mostra-altro-container {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Dimensione minima del bottone. */
+.btn-mostra-altro {
+    min-width: 180px;
+}
